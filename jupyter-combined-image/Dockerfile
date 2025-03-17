@@ -61,6 +61,11 @@ RUN curl -fOL https://github.com/coder/code-server/releases/download/v$CODE_VERS
     && rm -f code-server_${CODE_VERSION}_amd64.deb
 RUN /opt/conda/bin/conda install -c conda-forge jupyter-server-proxy
 RUN /opt/conda/bin/conda install -c conda-forge jupyter-vscode-proxy
+
+RUN pip install jupyterlab-visualpython
+RUN pip install jupyter-ai langchain-ollama
+
+COPY jupyter_jupyter_ai_config.json /etc/jupyter/jupyter_jupyter_ai_config.json
  
 # Switch back to jovyan to avoid accidental container runs as root
 USER ${NB_UID}
