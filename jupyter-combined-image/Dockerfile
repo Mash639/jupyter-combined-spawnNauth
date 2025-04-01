@@ -65,6 +65,14 @@ RUN /opt/conda/bin/conda install -c conda-forge jupyter-vscode-proxy
 RUN pip install jupyterlab-visualpython
 RUN pip install jupyter-ai langchain-ollama
 
+#add visual python related dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+#install data catalog extension
+COPY fetchextension-0.1.0-servicename.tar.gz .
+RUN pip install --no-cache-dir -r fetchextension-0.1.0-servicename.tar.gz
+
 COPY jupyter_jupyter_ai_config.json /etc/jupyter/jupyter_jupyter_ai_config.json
  
 # Switch back to jovyan to avoid accidental container runs as root
