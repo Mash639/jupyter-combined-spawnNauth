@@ -70,8 +70,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 #install data catalog extension
-COPY fetchextension-0.1.0-servicename.tar.gz .
-RUN pip install --no-cache-dir -r fetchextension-0.1.0-servicename.tar.gz
+COPY fetchextension-0.1.0.tar.gz .
+RUN pip install fetchextension-0.1.0.tar.gz
 
 COPY jupyter_jupyter_ai_config.json /etc/jupyter/jupyter_jupyter_ai_config.json
  
