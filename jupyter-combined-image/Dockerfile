@@ -13,7 +13,31 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* && \
         strace \
         lsof \
         less \
-		libcurl4-openssl-dev
+		libcurl4-openssl-dev \
+		libssl-dev \
+        libxml2-dev \
+        libpng-dev \
+        libjpeg-dev \
+        libtiff5-dev \
+        libcairo2-dev \
+        libxt-dev \
+        libfreetype6-dev \
+        libfontconfig1-dev \
+        libblas-dev \
+        liblapack-dev \
+        libsqlite3-dev \
+        libpq-dev \
+        libmysqlclient-dev \
+        unixodbc-dev \
+        libharfbuzz-dev \
+        libfribidi-dev \
+        libicu-dev \
+        libv8-dev \
+        libnode-dev \
+        libgdal-dev \
+        libgeos-dev \
+        libproj-dev \
+        libudunits2-dev
 
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
