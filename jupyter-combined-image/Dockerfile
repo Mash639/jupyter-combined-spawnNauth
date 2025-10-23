@@ -12,7 +12,8 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* && \
         gpg-agent \
         strace \
         lsof \
-        less
+        less \
+		libcurl4-openssl-dev
 
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
